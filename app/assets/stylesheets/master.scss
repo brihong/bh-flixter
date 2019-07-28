@@ -1,1 +1,16 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+
+.navbar {
+  font-family: 'Audiowide', cursive;
+  font-weight: 200;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  background: image_url('pw_maze_black.png');
+}
+
+.navbar-inverse a.navbar-brand {
+  font-family: 'Audiowide', cursive;
+  font-weight: 100;
+  color: #FF9D13;
+  font-size: 26px;
+}
