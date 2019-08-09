@@ -15,7 +15,7 @@ class Instructor::LessonsController < ApplicationController
 
   def require_authorized_for_current_section
     if current_section.course.user != current_user
-      return render plain: 'Unauthorized', status: :unauthorized
+      render plain: 'Unauthorized', status: :unauthorized
     end
   end
 
@@ -27,5 +27,5 @@ class Instructor::LessonsController < ApplicationController
   def lesson_params
     params.require(:lesson).permit(:title, :subtitle, :video)
   end
-
 end
+
