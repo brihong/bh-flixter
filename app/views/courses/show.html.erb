@@ -20,7 +20,6 @@
 
       <br />
       <br />
-
       <% if current_user %>
         <% if current_user.enrolled_in?(@course) %>
           <h3 class="badge badge-info">You Are Enrolled!</h3>
@@ -56,22 +55,21 @@
           <%= section.title %>
         </h3>
         <div class="row">
-      <% section.lessons.rank(:row_order).each do |lesson| %>
-        <div class="col-12 col-sm-6">
-          <div class="lesson text-center">
-            <br />
-            <%= link_to lesson_path(lesson) do %>
-             <b><%= lesson.title %></b>
-             <br />
-              <%= lesson.subtitle %>
-            <% end %>
-          </div>
+          <% section.lessons.rank(:row_order).each do |lesson| %>
+            <div class="col-12 col-sm-6">
+              <div class="lesson text-center">
+                <br />
+                <%= link_to lesson_path(lesson) do %>
+                  <b><%= lesson.title %></b>
+                  <br />
+                  <%= lesson.subtitle %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
         </div>
-        <% end %>
-      </div>
-      <br class="clr" />
+        <br class="clr" />
       </div>
     <% end %>
   </div>
 </div>
-
